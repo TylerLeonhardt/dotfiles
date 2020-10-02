@@ -1,0 +1,26 @@
+{
+    "CompatPowerShellGet": {
+        "version": "*",
+        "prerelease": true
+    },
+    "posh-git": {
+        "version": "*",
+        "prerelease": true
+    },
+    "oh-my-posh": {
+        "version": "*",
+        "prerelease": true
+    },
+    "Microsoft.PowerShell.SecretManagement": {
+        "version": "*",
+        "prerelease": true
+    },
+    "Microsoft.PowerShell.UnixCompleters": {
+        "version": "*",
+        "prerelease": true
+    },
+    "Microsoft.PowerShell.ConsoleGuiTools": {
+        "version": "*",
+        "prerelease": true
+    }
+}
