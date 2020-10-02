@@ -6,4 +6,4 @@ Get-ChildItem -Path $configPath | ForEach-Object {
 }
 
 Install-Module PSDepend -Force
-Invoke-PSDepend
+Invoke-PSDepend -Force (Join-Path $PSScriptRoot 'requirements.psd1')
