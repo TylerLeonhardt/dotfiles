@@ -82,8 +82,8 @@ $ExecutionContext.SessionState.InvokeCommand.LocationChangedAction += {
 #region Global variables
 
 # For PSZoom
-$global:ZoomApiKey = Get-Secret -Name ZoomApiKey -AsPlainText
-$global:ZoomApiSecret = Get-Secret -Name ZoomApiSecret -AsPlainText
+$global:ZoomApiKey = Get-Secret -Name ZoomApiKey -AsPlainText -ErrorAction SilentlyContinue
+$global:ZoomApiSecret = Get-Secret -Name ZoomApiSecret -AsPlainText -ErrorAction SilentlyContinue
 
 #endregion
 
