@@ -1,3 +1,5 @@
+echo "it ran" > ~/foo.txt
+
 # If PowerShell isn't installed, install PowerShell
 if ! command -v pwsh &> /dev/null
 then
