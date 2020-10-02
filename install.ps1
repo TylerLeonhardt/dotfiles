@@ -5,5 +5,5 @@ Get-ChildItem -Path $configPath | ForEach-Object {
     New-Item -Path (Join-Path '~/.config' $_.Name) -ItemType SymbolicLink -Value $_.FullName
 }
 
-Install-Module PSDepend
+Install-Module PSDepend -Force
 Invoke-PSDepend
