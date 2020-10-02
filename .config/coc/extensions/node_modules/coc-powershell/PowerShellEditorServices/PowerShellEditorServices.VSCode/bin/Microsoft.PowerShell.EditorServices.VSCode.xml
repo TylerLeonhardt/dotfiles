@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.PowerShell.EditorServices.VSCode</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.NewVSCodeHtmlContentViewCommand">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.NewVSCodeHtmlContentViewCommand.Title">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.NewVSCodeHtmlContentViewCommand.ShowInColumn">
+            
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.NewVSCodeHtmlContentViewCommand.BeginProcessing">
+            
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.SetVSCodeHtmlContentViewCommand">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.SetVSCodeHtmlContentViewCommand.HtmlContentView">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.SetVSCodeHtmlContentViewCommand.HtmlBodyContent">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.SetVSCodeHtmlContentViewCommand.JavaScriptPaths">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.SetVSCodeHtmlContentViewCommand.StyleSheetPaths">
+            
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.SetVSCodeHtmlContentViewCommand.BeginProcessing">
+            
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CloseVSCodeHtmlContentViewCommand">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CloseVSCodeHtmlContentViewCommand.HtmlContentView">
+            
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CloseVSCodeHtmlContentViewCommand.BeginProcessing">
+            
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.ShowVSCodeHtmlContentViewCommand">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.ShowVSCodeHtmlContentViewCommand.HtmlContentView">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.ShowVSCodeHtmlContentViewCommand.ViewColumn">
+            
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.ShowVSCodeHtmlContentViewCommand.BeginProcessing">
+            
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.WriteVSCodeHtmlContentViewCommand">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.WriteVSCodeHtmlContentViewCommand.HtmlContentView">
+            
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.WriteVSCodeHtmlContentViewCommand.AppendedHtmlBodyContent">
+            
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.WriteVSCodeHtmlContentViewCommand.ProcessRecord">
+            
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.NewCustomViewRequest">
+            <summary>
+            Defines a message for creating a custom view in the editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.NewCustomViewRequest.Method">
+            <summary>
+            The Language Server Protocol 'method'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.NewCustomViewRequest.Id">
+            <summary>
+            Gets or sets the Id of the view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.NewCustomViewRequest.Title">
+            <summary>
+            Gets or sets the title of the view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.NewCustomViewRequest.ViewType">
+            <summary>
+            Gets or sets the view's type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ShowCustomViewRequest">
+            <summary>
+            Defines a message for showing a custom view in the editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ShowCustomViewRequest.Method">
+            <summary>
+            The Language Server Protocol 'method'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ShowCustomViewRequest.Id">
+            <summary>
+            Gets or sets the Id of the view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ShowCustomViewRequest.ViewColumn">
+            <summary>
+            Gets or sets the column in which the view should be shown.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.CloseCustomViewRequest">
+            <summary>
+            Defines a message for closing a custom view in the editor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.CloseCustomViewRequest.Method">
+            <summary>
+            The Language Server Protocol 'method'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.CloseCustomViewRequest.Id">
+            <summary>
+            Gets or sets the Id of the view.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.CustomViewType">
+            <summary>
+            Enumerates the available custom view types.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.CustomViewType.HtmlContent">
+            <summary>
+            An IHtmlContentView.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.HtmlContent">
+            <summary>
+            Contains details about the HTML content to be
+            displayed in an IHtmlContentView.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.HtmlContent.BodyContent">
+            <summary>
+            Gets or sets the HTML body content.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.HtmlContent.JavaScriptPaths">
+            <summary>
+            Gets or sets the array of JavaScript file paths
+            to be used in the HTML content.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.HtmlContent.StyleSheetPaths">
+            <summary>
+            Gets or sets the array of stylesheet (CSS) file
+            paths to be used in the HTML content.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.SetHtmlContentViewRequest">
+            <summary>
+            Defines a message for setting the content of a HtmlContentView.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.SetHtmlContentViewRequest.Method">
+            <summary>
+            The Language Server Protocol 'method'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.SetHtmlContentViewRequest.Id">
+            <summary>
+            Gets or sets the Id of the view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.SetHtmlContentViewRequest.HtmlContent">
+            <summary>
+            Gets or sets the HTML body content to set in the view.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.AppendHtmlContentViewRequest">
+            <summary>
+            Defines a message for appending to the content of an IHtmlContentView.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.AppendHtmlContentViewRequest.Method">
+            <summary>
+            The Language Server Protocol 'method'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.AppendHtmlContentViewRequest.Id">
+            <summary>
+            Gets or sets the Id of the view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.AppendHtmlContentViewRequest.AppendedHtmlBodyContent">
+            <summary>
+            Gets or sets the HTML body content to append to the view.
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ICustomView">
+            <summary>
+            Defines the interface for an arbitrary custom view that
+            can be shown in Visual Studio Code.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ICustomView.Id">
+            <summary>
+            Gets the unique ID of the view.
+            </summary>
+        </member>
+        <member name="P:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ICustomView.Title">
+            <summary>
+            Gets the display title of the view.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ICustomView.Show(Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ViewColumn)">
+            <summary>
+            Shows the view in the specified column.
+            </summary>
+            <param name="viewColumn">The column in which the view will be shown.</param>
+            <returns>A Task which can be awaited for completion.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ICustomView.Close">
+            <summary>
+            Closes the view in the editor.
+            </summary>
+            <returns>A Task which can be awaited for completion.</returns>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.IHtmlContentView">
+            <summary>
+            Defines the interface for a custom view which displays
+            rendered HTML content in an editor tab.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.IHtmlContentView.SetContentAsync(System.String)">
+            <summary>
+            Sets the HTML body content of the view.
+            </summary>
+            <param name="htmlBodyContent">
+            The HTML content that is placed inside of the page's body tag.
+            </param>
+            <returns>A Task which can be awaited for completion.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.IHtmlContentView.SetContentAsync(Microsoft.PowerShell.EditorServices.VSCode.CustomViews.HtmlContent)">
+            <summary>
+            Sets the HTML content of the view.
+            </summary>
+            <param name="htmlContent">
+            The HTML content that is placed inside of the page's body tag.
+            </param>
+            <returns>A Task which can be awaited for completion.</returns>
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.IHtmlContentView.AppendContentAsync(System.String)">
+            <summary>
+            Appends HTML body content to the view.
+            </summary>
+            <param name="appendedHtmlBodyContent">
+            The HTML fragment to be appended to the output stream.
+            </param>
+            <returns>A Task which can be awaited for completion.</returns>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.IHtmlContentViews">
+            <summary>
+            Defines an interface for a component which can create
+            new IHtmlContentView implementation instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.IHtmlContentViews.CreateHtmlContentViewAsync(System.String)">
+            <summary>
+            Creates an instance of an IHtmlContentView implementation.
+            </summary>
+            <param name="viewTitle">The title of the view to create.</param>
+            <returns>
+            A Task to await for completion, returns the IHtmlContentView instance.
+            </returns>
+        </member>
+        <member name="T:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ViewColumn">
+            <summary>
+            Defines the possible columns in which a custom view
+            can be displayed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ViewColumn.One">
+            <summary>
+            The first view column.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ViewColumn.Two">
+            <summary>
+            The second view column.
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.EditorServices.VSCode.CustomViews.ViewColumn.Three">
+            <summary>
+            The third view column.
+            </summary>
+        </member>
+    </members>
+</doc>

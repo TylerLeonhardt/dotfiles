@@ -1,0 +1,6 @@
+# has OAuth token
+.config/gh/hosts.yml
+
+# I don't think I need to carry caches along
+**/*[cC]ache*
+

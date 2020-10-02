@@ -1,0 +1,6 @@
+extensions.forceUpdateAll
+powershell.toggleTerminal
+powershell.execute
+powershell.evaluateLine
+powershell.evaluateSelection
+terminal.Toggle

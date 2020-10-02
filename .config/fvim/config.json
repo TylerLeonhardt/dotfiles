@@ -1,0 +1,35 @@
+{
+  "workspace": [
+    {
+      "path": "/",
+      "mainwin": {
+        "x": 145,
+        "y": 102,
+        "w": 1380,
+        "h": 855,
+        "state": "Normal"
+      }
+    },
+    {
+      "path": "/Users/tyleonha",
+      "mainwin": {
+        "x": 0,
+        "y": 23,
+        "w": 1680,
+        "h": 1005,
+        "state": "Normal"
+      }
+    },
+    {
+      "path": "/Users/tyleonha/Code/CSharp/fvim/lib",
+      "mainwin": {
+        "x": 447,
+        "y": 155,
+        "w": 800,
+        "h": 600,
+        "state": "Normal"
+      }
+    }
+  ],
+  "Logging": null
+}

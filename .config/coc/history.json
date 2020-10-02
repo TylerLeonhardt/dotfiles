@@ -1,0 +1,23 @@
+{
+  "commands": {
+    "%2FUsers%2Ftyleonha%2FCode%2FPowerShell%2Fvscode%2FPowerShellEditorServices": [
+      "toggle"
+    ]
+  },
+  "actions": {
+    "%2FUsers%2Ftyleonha%2FCode%2FPowerShell%2Fcoc-powershell": [
+      ":q:q---"
+    ],
+    "%2FUsers%2Ftyleonha%2FCode%2FPowerShell%2FPowerShell": [
+      "power-"
+    ]
+  },
+  "extensions": {
+    "%2FUsers%2Ftyleonha%2FCode%2FCSharp%2Fcsharp-language-server-protocol": [
+      "q:q"
+    ],
+    "%2FUsers%2Ftyleonha%2FDownloads%2Fdftd3-lib": [
+      "::q"
+    ]
+  }
+}
