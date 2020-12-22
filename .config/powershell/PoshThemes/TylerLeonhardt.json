@@ -12,58 +12,41 @@
                 {
                     "type": "exit",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "invert_powerline": false,
                     "foreground": "#CB4B16",
-                    "background": "",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
                     "properties": null
                 },
                 {
                     "type": "root",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "invert_powerline": false,
                     "foreground": "#CECE04",
-                    "background": "",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
                     "properties": null
                 },
                 {
                     "type": "session",
                     "style": "plain",
                     "foreground": "#ffffff",
-                    "background": "",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
                     "properties": {
-                        "display_host": false
+                        "display_host": false,
+                        "prefix": ""
                     }
                 },
                 {
                     "type": "path",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "invert_powerline": false,
                     "foreground": "#0973C0",
-                    "background": "",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
                     "properties": {
-                        "style": "short"
+                        "style": "short",
+                        "prefix": ""
                     }
                 },
                 {
                     "type": "git",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "invert_powerline": false,
                     "foreground": "#C1C106",
-                    "background": "",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
                     "properties": {
                         "prefix": "\u003c#ffffff\u003egit:\u003c/\u003e"
                     }
@@ -71,17 +54,15 @@
                 {
                     "type": "node",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "foreground": "#6CA35E",
-                    "background": "",
                     "properties": {
-                        "prefix": " ⬢ "
+                        "prefix": "⬢ ",
+                        "postfix": ""
                     }
                 },
                 {
                     "type": "executiontime",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "foreground": "#ffffff",
                     "background": "#8800dd",
                     "properties": {
@@ -93,14 +74,11 @@
                 {
                     "type": "text",
                     "style": "plain",
-                    "powerline_symbol": "",
                     "invert_powerline": false,
                     "foreground": "#ffffff",
-                    "background": "",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
                     "properties": {
                         "prefix": "\n",
+                        "postfix": "",
                         "text": "\u003c#CB4B16\u003e❯\u003c/\u003e\u003c#CACA02\u003e❯\u003c/\u003e\u003c#4E9A06\u003e❯\u003c/\u003e"
                     }
                 }
