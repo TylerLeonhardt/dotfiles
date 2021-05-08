@@ -10,6 +10,9 @@ if ($hasOhMyPosh) {
     }
 }
 
+# We still need posh-git for git completers
+Import-Module posh-git -ErrorAction SilentlyContinue
+
 if (Get-Module PSReadLine) {
     Set-PSReadLineKeyHandler -Chord Alt+Enter -Function AddLine
     Set-PSReadLineOption -ContinuationPrompt "  " -PredictionSource History -Colors @{
@@ -74,7 +77,9 @@ if (Get-Command dotnet-suggest -ErrorAction SilentlyContinue) {
 }
 
 # UnixCompleters
-Import-Module Microsoft.PowerShell.UnixCompleters -ErrorAction SilentlyContinue
+if (-not $IsWindows) {
+    Import-Module Microsoft.PowerShell.UnixCompleters -ErrorAction SilentlyContinue
+}
 
 #endregion
 
