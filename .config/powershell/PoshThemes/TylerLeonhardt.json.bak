@@ -1,0 +1,88 @@
+{
+    "final_space": false,
+    "console_title": false,
+    "console_title_style": "",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "segments": [
+                {
+                    "type": "exit",
+                    "style": "plain",
+                    "invert_powerline": false,
+                    "foreground": "#CB4B16",
+                    "properties": null
+                },
+                {
+                    "type": "root",
+                    "style": "plain",
+                    "invert_powerline": false,
+                    "foreground": "#CECE04",
+                    "properties": null
+                },
+                {
+                    "type": "session",
+                    "style": "plain",
+                    "foreground": "#ffffff",
+                    "properties": {
+                        "display_host": false,
+                        "prefix": ""
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "invert_powerline": false,
+                    "foreground": "#0973C0",
+                    "properties": {
+                        "style": "short",
+                        "prefix": ""
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "invert_powerline": false,
+                    "foreground": "#C1C106",
+                    "properties": {
+                        "prefix": "\u003c#ffffff\u003egit:\u003c/\u003e"
+                    }
+                },
+                {
+                    "type": "node",
+                    "style": "plain",
+                    "foreground": "#6CA35E",
+                    "properties": {
+                        "prefix": "⬢ ",
+                        "postfix": ""
+                    }
+                },
+                {
+                    "type": "executiontime",
+                    "style": "plain",
+                    "foreground": "#ffffff",
+                    "background": "#8800dd",
+                    "properties": {
+                        "threshold": 500,
+                        "style": "austin",
+                        "prefix": " <#fefefe>⏱ </> "
+                    }
+                },
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "invert_powerline": false,
+                    "foreground": "#ffffff",
+                    "properties": {
+                        "prefix": "\n",
+                        "postfix": "",
+                        "text": "\u003c#CB4B16\u003e❯\u003c/\u003e\u003c#CACA02\u003e❯\u003c/\u003e\u003c#4E9A06\u003e❯\u003c/\u003e"
+                    }
+                }
+            ]
+        }
+    ]
+}

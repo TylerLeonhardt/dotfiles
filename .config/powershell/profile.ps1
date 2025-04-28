@@ -1,19 +1,18 @@
 #region UX config
 
-$hasOhMyPosh = Import-Module oh-my-posh -MinimumVersion 3.0 -PassThru -ErrorAction SilentlyContinue
-if ($hasOhMyPosh) {
+if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
     $themePath = '~/.config/powershell/PoshThemes/TylerLeonhardt.json'
     if (Test-Path $themePath) {
-        Set-PoshPrompt -Theme $themePath
+        oh-my-posh init pwsh --config $themePath | Invoke-Expression
     } else {
-        Set-PoshPrompt -Theme material
+        oh-my-posh init pwsh | Invoke-Expression
     }
 }
 
 # We still need posh-git for git completers
 Import-Module posh-git -ErrorAction SilentlyContinue
 
-if (Get-Module PSReadLine) {
+if (Get-Module PSReadLine -ErrorAction SilentlyContinue) {
     Set-PSReadLineKeyHandler -Chord Alt+Enter -Function AddLine
     Set-PSReadLineOption -ContinuationPrompt "  " -PredictionSource History -Colors @{
         Operator = "`e[95m"
@@ -76,11 +75,6 @@ if (Get-Command dotnet-suggest -ErrorAction SilentlyContinue) {
     $env:DOTNET_SUGGEST_SCRIPT_VERSION = "1.0.0"
 }
 
-# UnixCompleters
-if (-not $IsWindows) {
-    Import-Module Microsoft.PowerShell.UnixCompleters -ErrorAction SilentlyContinue
-}
-
 #endregion
 
 #region Update PowerShell Daily
@@ -107,4 +101,11 @@ $ExecutionContext.SessionState.InvokeCommand.LocationChangedAction += {
     [Environment]::CurrentDirectory = $pwd.Path
 }
 
+#endregion
+
+#region gpg
+if (Get-Command -ErrorAction SilentlyContinue gpgconf) {
+    $env:GPG_TTY = tty
+    gpgconf --launch gpg-agent
+}
 #endregion
