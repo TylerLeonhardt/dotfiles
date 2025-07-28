@@ -1,3 +1,5 @@
+$IsUnix = $IsLinux -or $IsMacOS
+
 #region UX config
 
 if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
@@ -14,10 +16,13 @@ Import-Module posh-git -ErrorAction SilentlyContinue
 
 if (Get-Module PSReadLine -ErrorAction SilentlyContinue) {
     Set-PSReadLineKeyHandler -Chord Alt+Enter -Function AddLine
-    Set-PSReadLineOption -ContinuationPrompt "  " -PredictionSource History -Colors @{
-        Operator = "`e[95m"
-        Parameter = "`e[95m"
-        InlinePrediction = "`e[36;7;238m"
+    Set-PSReadLineOption -ContinuationPrompt "  "
+    if ($IsCoreCLR) {
+        Set-PSReadLineOption -PredictionSource History -Colors @{
+            Operator = "`e[95m"
+            Parameter = "`e[95m"
+            InlinePrediction = "`e[36;7;238m"
+        }
     }
 
     # Searching for commands with up/down arrow is really handy.  The
@@ -29,17 +34,6 @@ if (Get-Module PSReadLine -ErrorAction SilentlyContinue) {
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
     Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
     Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-}
-
-#endregion
-
-#region Helper functions
-
-# Allows idweb to be open from mac
-function idweb {
-    kdestroy --all
-    kinit --keychain tyleonha@REDMOND.CORP.MICROSOFT.COM
-    open https://idweb -a Safari.app
 }
 
 #endregion
@@ -79,15 +73,17 @@ if (Get-Command dotnet-suggest -ErrorAction SilentlyContinue) {
 
 #region Update PowerShell Daily
 
-$updateJob = Start-ThreadJob -ScriptBlock {
-    Invoke-Expression "& {$(Invoke-RestMethod aka.ms/install-powershell.ps1)} -Daily"
-}
+if ($IsCoreCLR) {
+    $updateJob = Start-ThreadJob -ScriptBlock {
+        Invoke-Expression "& {$(Invoke-RestMethod aka.ms/install-powershell.ps1)} -Daily"
+    }
 
-$eventJob = Register-ObjectEvent -InputObject $updateJob -EventName StateChanged -Action {
-    if($Event.Sender.State -eq [System.Management.Automation.JobState]::Completed) {
-    	Get-EventSubscriber $eventJob.Name | Unregister-Event
-	    Remove-Job $eventJob -ErrorAction SilentlyContinue
-    	Receive-Job $updateJob -Wait -AutoRemoveJob -ErrorAction SilentlyContinue
+    $eventJob = Register-ObjectEvent -InputObject $updateJob -EventName StateChanged -Action {
+        if($Event.Sender.State -eq [System.Management.Automation.JobState]::Completed) {
+            Get-EventSubscriber $eventJob.Name | Unregister-Event
+            Remove-Job $eventJob -ErrorAction SilentlyContinue
+            Receive-Job $updateJob -Wait -AutoRemoveJob -ErrorAction SilentlyContinue
+        }
     }
 }
 
@@ -97,14 +93,16 @@ $eventJob = Register-ObjectEvent -InputObject $updateJob -EventName StateChanged
 
 # Set CurrentDirectory when LocationChangedAction is invoked.
 # This allows iTerm2's "Reuse previous session's directory" to work
-$ExecutionContext.SessionState.InvokeCommand.LocationChangedAction += {
-    [Environment]::CurrentDirectory = $pwd.Path
+if ($IsUnix) {
+    $ExecutionContext.SessionState.InvokeCommand.LocationChangedAction += {
+        [Environment]::CurrentDirectory = $pwd.Path
+    }
 }
 
 #endregion
 
 #region gpg
-if (Get-Command -ErrorAction SilentlyContinue gpgconf) {
+if ($IsUnix -and (Get-Command -ErrorAction SilentlyContinue gpgconf)) {
     $env:GPG_TTY = tty
     gpgconf --launch gpg-agent
 }
