@@ -4,12 +4,12 @@ $configPath = (Join-Path $PSScriptRoot '.config')
 if ($IsWindows) {
     $myDocuments = [System.Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)
     Get-ChildItem -Path (Join-Path $configPath 'powershell') | ForEach-Object {
-        $powerShellFile = Join-Path $myDocuments 'PowerShell' $_.Name
+        $powerShellFile = Join-Path -Path $myDocuments,'PowerShell' -ChildPath $_.Name
         Remove-Item -Recurse -Force $powerShellFile -ErrorAction SilentlyContinue
         New-Item -Path $powerShellFile -ItemType SymbolicLink -Value $_.FullName -Force
 
         # Apply to Windows PowerShell as well just in case I don't have PowerShell
-        $winPowerShellFile = Join-Path $myDocuments 'WindowsPowerShell' $_.Name
+        $winPowerShellFile = Join-Path -Path $myDocuments,'WindowsPowerShell' -ChildPath $_.Name
         Remove-Item -Recurse -Force $winPowerShellFile -ErrorAction SilentlyContinue
         New-Item -Path $winPowerShellFile -ItemType SymbolicLink -Value $_.FullName -Force
     }
